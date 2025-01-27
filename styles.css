@@ -1,0 +1,506 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('image30.jpg') no-repeat center center/cover;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+.header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #006400; /* Dark green for Kenya's heritage */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header .logo {
+    font-size: 2rem;
+}
+nav:hover {
+    background-color: #769176; /* Slightly darker green on hover */}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+a:hover {
+background-color: #228b22; /* Lighter green */
+color: #f0f0f0; /* Light color for contrast */
+transform: scale(1.9); /* Increase size */}
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.logo {
+color: white;
+font-size: 24px;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;}
+
+
+.menu {
+display: flex;
+gap: 20px;
+}
+
+.menu li {
+position: relative;
+}
+
+.menu a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+padding: 10px 15px;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+background-color: #228b22; /* Lighter green */
+transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: url('image31.jpg') no-repeat center center/cover;
+    color: rgb(46, 6, 6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#search {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f4a261;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#search:hover {
+
+    background: #e76f51;
+
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f4a261;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #e76f51;
+}
+
+/*  About Section - Enhanced with Animation and Appeal */
+.about {
+background: rgba(255, 255, 255, 0.8);
+padding: 50px 0;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.about h2 {
+font-size: 2rem;
+margin-bottom: 20px;
+position: relative;
+animation: fadeInDown 1s ease-in-out;
+color: #4CAF50;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about p {
+font-size: 1rem;
+color: #555;
+max-width: 800px;
+margin: 0 auto;
+line-height: 1.8;
+animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Background animation */
+.about::before {
+content: '';
+position: absolute;
+top: -50px;
+left: -50px;
+width: 200px;
+height: 200px;
+background: #f4a261;
+border-radius: 50%;
+opacity: 0.3;
+animation: moveBackground 6s linear infinite;
+}
+
+.about::after {
+content: '';
+position: absolute;
+bottom: -50px;
+right: -50px;
+width: 200px;
+height: 200px;
+background: #e76f51;
+border-radius: 50%;
+opacity: 0.3;
+animation: moveBackground 6s linear infinite reverse;
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes moveBackground {
+0% {
+transform: translate(0, 0);
+}
+50% {
+transform: translate(30px, 30px);
+}
+100% {
+transform: translate(0, 0);
+}
+}
+
+
+
+/* Library Section */
+.library {
+    padding: 50px 0;
+}
+
+.library h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.search-bar, #searchInput {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input, #searchInput {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+ #searchInput {
+    background: #99bd9a;
+    display: flex;
+    margin: auto; /* Centers block-level elements */
+    display: block;
+
+ }
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #388E3C;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background: #cfceb7;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #388E3C;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.welcoming {
+font-size: 2.5rem;
+color: #223950;
+position: relative;
+animation: fallRain 2s ease-out;
+opacity: 0;
+}
+
+.welcoming {
+font-size: 2.5rem;
+color: #2c3e50;
+position: relative;
+animation: fadeAndRotate 4s infinite;
+display: inline-block;
+}
+
+/* Keyframes for the combined effects */
+@keyframes fadeAndRotate {
+0% {
+opacity: 0.3;
+transform: rotate(0deg);
+}
+25% {
+opacity: 1;
+transform: rotate(5deg);
+}
+50% {
+opacity: 0.7;
+transform: rotate(-5deg);
+}
+75% {
+opacity: 1;
+transform: rotate(3deg);
+}
+100% {
+opacity: 0.3;
+transform: rotate(0deg);
+}}
+
+
+/* Table container */
+#book-list {
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+#book-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Table header */
+#book-list th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Table data cells */
+#book-list td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Hover effect on rows */
+#book-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Add some space between rows */
+#book-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+    #book-list table {
+        font-size: 14px;
+    }
+
+    #book-list th, #book-list td {
+        padding: 10px;
+    }
+}
+/* Container for the book list and pagination */
+#book-list-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the book list */
+#book-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#book-list th, #book-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#book-list th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#book-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the pagination controls */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination p {
+    font-size: 14px;
+    color: #555;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#pagination button:hover {
+    background-color: #45a049;
+}
+
+#pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+

@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.thank-you {
+    font-size: 2em;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards, pulse 1.5s ease-in-out 1s infinite;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+/* Link Styling */
+.view-books-link {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover and Focus Effects */
+.view-books-link:hover,
+.view-books-link:focus {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Active Effect */
+.view-books-link:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 15px 10px rgba(76, 175, 80, 0);
+    }
+}
+
+/* Applying Pulse Animation */
+.view-books-link {
+    animation: pulse 2s infinite;
+}
